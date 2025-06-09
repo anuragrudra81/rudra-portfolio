@@ -38,13 +38,13 @@ export default function AboutSection() {
           <div className="md:col-span-1 flex flex-col items-center text-center md:text-left md:items-start">
             <Image 
               src="https://placehold.co/300x300.png" 
-              alt="A. Rudra" 
+              alt="Anurag Rudra" 
               width={200} 
               height={200} 
               className="rounded-full shadow-lg mb-6"
               data-ai-hint="professional portrait" 
             />
-            <h3 className="text-2xl font-headline font-semibold text-primary mb-2">A. Rudra</h3>
+            <h3 className="text-2xl font-headline font-semibold text-primary mb-2">Anurag Rudra</h3>
             <p className="text-muted-foreground mb-4">Web Developer & UI/UX Designer</p>
             <div className="flex items-center text-muted-foreground mb-6">
               <MapPin className="h-5 w-5 mr-2 text-primary" />
@@ -59,7 +59,7 @@ export default function AboutSection() {
               </CardHeader>
               <CardContent className="space-y-4 text-foreground">
                 <p>
-                  Hello! I'm A. Rudra, a dedicated and results-oriented web developer and UI/UX designer with a passion for creating elegant, efficient, and user-friendly digital experiences. With several years of experience in the industry, I specialize in translating complex ideas into beautiful and functional web solutions.
+                  Hello! I'm Anurag Rudra, a dedicated and results-oriented web developer and UI/UX designer with a passion for creating elegant, efficient, and user-friendly digital experiences. With several years of experience in the industry, I specialize in translating complex ideas into beautiful and functional web solutions.
                 </p>
                 <p>
                   My expertise spans across the full development lifecycle, from initial concept and design mockups to robust backend implementation and deployment. I thrive on challenges and am constantly learning new technologies to stay at the forefront of web development. I believe in a collaborative approach, working closely with clients to understand their vision and deliver products that exceed expectations.

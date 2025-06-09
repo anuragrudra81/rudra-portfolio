@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Briefcase, User, Settings, Mail, Brain } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle-button";
 
 const navItems = [
   { href: "#home", label: "Home", icon: <Briefcase className="h-5 w-5" /> },
@@ -35,20 +36,22 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="#home" className="text-2xl font-headline font-bold text-primary hover:opacity-80 transition-opacity">
-          A. Rudra
+          Anurag Rudra
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-2">
+        <nav className="hidden md:flex items-center space-x-2">
           {navItems.map((item) => (
             <Button key={item.label} variant="ghost" asChild className="font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">
               <Link href={item.href}>{item.label}</Link>
             </Button>
           ))}
+          <ThemeToggle />
         </nav>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" aria-label="Open menu">

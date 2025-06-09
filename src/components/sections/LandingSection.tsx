@@ -14,7 +14,7 @@ export default function LandingSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background -z-10"></div>
       <div className="container mx-auto px-4 md:px-6 text-center py-20 md:py-32">
         <h1 className="text-5xl md:text-7xl font-headline font-bold text-primary mb-6 animate-fade-in-down">
-          A. Rudra
+          Anurag Rudra
         </h1>
         <p className="text-xl md:text-2xl text-foreground mb-8 max-w-3xl mx-auto animate-fade-in-up delay-200">
           Crafting Digital Experiences that Inspire and Engage. I'm a passionate Web Developer & Designer dedicated to building innovative and user-centric solutions.
@@ -59,3 +59,4 @@ export default function LandingSection() {
 // If using Tailwind JIT, these would be:
 // animation: { 'fade-in-down': 'fade-in-down 0.5s ease-out forwards', ... }
 // keyframes: { 'fade-in-down': { '0%': { opacity: '0', transform: 'translateY(-20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } }, ... }
+
