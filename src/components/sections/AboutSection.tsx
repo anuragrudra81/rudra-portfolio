@@ -1,7 +1,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin, Download, GraduationCap, Award } from "lucide-react";
+import { MapPin, Download, GraduationCap, Award, ExternalLink } from "lucide-react";
 import Image from 'next/image';
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -56,19 +56,25 @@ const achievementsData = [
     name: "Foundations: Data, Data, Everywhere",
     issuer: "Coursera / Google",
     date: "Issued 20XX",
-    credentialLink: "#"
+    credentialLink: "/certificates/foundations_data_everywhere.pdf", // Example PDF path
+    imageUrl: "https://placehold.co/300x210.png", // Placeholder for certificate thumbnail
+    dataAiHint: "certificate document",
   },
   {
     name: "Crash Course on Python",
     issuer: "Coursera / Google",
     date: "Issued 20XX",
-    credentialLink: "#"
+    credentialLink: "/certificates/crash_course_python.pdf", // Example PDF path
+    imageUrl: "https://placehold.co/300x210.png",
+    dataAiHint: "certificate document",
   },
   {
     name: "Graphic Design Certification",
     issuer: "Your Certifying Body",
     date: "Issued 20XX",
-    credentialLink: "#"
+    credentialLink: "/certificates/graphic_design_certification.pdf", // Example PDF path
+    imageUrl: "https://placehold.co/300x210.png",
+    dataAiHint: "certificate document",
   }
 ];
 
@@ -158,19 +164,37 @@ export default function AboutSection() {
                   <CardTitle className="text-2xl text-primary font-headline">Achievements & Certifications</CardTitle>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-6">
-                {achievementsData.map((ach, index) => (
-                  <div key={index}>
-                    <h4 className="text-lg font-semibold text-foreground">{ach.name}</h4>
-                    <p className="text-base text-muted-foreground">{ach.issuer}</p>
-                    <p className="text-sm text-accent font-medium">{ach.date}</p>
-                    {ach.credentialLink && ach.credentialLink !== "#" && (
-                       <Link href={ach.credentialLink} target="_blank" rel="noopener noreferrer" className="text-sm text-accent hover:underline">
-                        View Credential
-                       </Link>
-                    )}
-                  </div>
-                ))}
+              <CardContent>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10">
+                  {achievementsData.map((ach, index) => (
+                    <div key={index} className="flex flex-col items-center text-center sm:text-left sm:items-start">
+                      <h4 className="text-lg font-semibold text-foreground mb-1">{ach.name}</h4>
+                      <p className="text-sm text-muted-foreground">{ach.issuer}</p>
+                      <p className="text-xs text-accent font-medium mb-3">{ach.date}</p>
+                      
+                      {ach.credentialLink && ach.imageUrl && (
+                        <Link href={ach.credentialLink} target="_blank" rel="noopener noreferrer" className="block w-full max-w-[250px] group transition-all duration-300 hover:scale-[1.02]">
+                          <div className="aspect-[4/3] relative border-2 border-muted group-hover:border-primary rounded-lg overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300 bg-background group-hover:bg-card">
+                            <Image
+                              src={ach.imageUrl}
+                              alt={`Certificate for ${ach.name}`}
+                              layout="fill"
+                              objectFit="contain"
+                              className="p-2 transition-transform duration-300 group-hover:scale-105"
+                              data-ai-hint={ach.dataAiHint}
+                            />
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <ExternalLink className="h-8 w-8 text-white" />
+                            </div>
+                          </div>
+                          <p className="text-center text-xs text-accent mt-2 group-hover:underline">
+                            View Certificate
+                          </p>
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </CardContent>
             </Card>
 
