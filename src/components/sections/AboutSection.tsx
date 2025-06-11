@@ -32,48 +32,71 @@ const experienceData = [
 
 const educationData = [
   {
-    degree: "Intermediate",
-    institution: "Your College Name",
-    period: "20XX - 20YY",
-    details: "Science Stream"
-  },
-  {
-    degree: "HSC (Higher Secondary Certificate)",
-    institution: "Your School/College Name",
-    period: "Completed 20XX",
+    degree: "BACHELOR OF SCIENCE IN BUSINESS ADMINISTRATION & ARTIFICIAL INTELLIGENCE",
+    institution: "East Delta University",
+    period: "2025-running",
     details: "Focus on Computer Applications"
   },
   {
+    degree: "HSC (Higher Secondary Certificate)",
+    institution: "Government City College, Chattogram",
+    period: "2022-2024",
+    details: "Science"
+  },
+  {
     degree: "SSC (Secondary School Certificate)",
-    institution: "Your School Name",
-    period: "Completed 20XX",
+    institution: "Chittagong Collegiate School",
+    period: "2019-2021",
+    details: "Science"
+  },
+  {
+    degree: "JSC (Secondary School Certificate)",
+    institution: "St. Placid's School & College ",
+    period: "2018",
     details: ""
   }
+
 ];
 
 const achievementsData = [
   {
     name: "Foundations: Data, Data, Everywhere",
     issuer: "Coursera / Google",
-    date: "Issued 20XX",
-    credentialLink: "/certificates/foundations_data_everywhere.pdf", // Example PDF path
-    imageUrl: "https://placehold.co/300x210.png", // Placeholder for certificate thumbnail
+    date: "Issued 2022",
+    credentialLink: "https://www.coursera.org/account/accomplishments/verify/KNEERTZ4PX65", // Example PDF path
+    imageUrl: "/images/Foundations.jpg", // Placeholder for certificate thumbnail
     dataAiHint: "certificate document",
   },
   {
     name: "Crash Course on Python",
     issuer: "Coursera / Google",
-    date: "Issued 20XX",
-    credentialLink: "/certificates/crash_course_python.pdf", // Example PDF path
-    imageUrl: "https://placehold.co/300x210.png",
+    date: "Issued 2022",
+    credentialLink: "https://www.coursera.org/account/accomplishments/verify/W8NF4S7NZJZT", // Example PDF path
+    imageUrl: "/images/Python.jpg",
     dataAiHint: "certificate doccument",
   },
   {
-    name: "Graphic Design Certification",
-    issuer: "Your Certifying Body",
-    date: "Issued 20XX",
-    credentialLink: "/certificates/graphic_design_certification.pdf", // Example PDF path
-    imageUrl: "https://placehold.co/300x210.png",
+    name: "COVID-19 Training for Healthcare Workers",
+    issuer: "Coursera / Stanford",
+    date: "Issued 2022",
+    credentialLink: "https://www.coursera.org/account/accomplishments/verify/ZDE8F8TDHQGN", // Example PDF path
+    imageUrl: "/images/Stanford.jpg",
+    dataAiHint: "certificate document",
+  },
+  {
+    name: "Graphic Design",
+    issuer: "LinkedIn",
+    date: "Issued 2022",
+    credentialLink: "ATKyjdKKxXnljlgXoek1zMZxcyn3", // Example PDF path
+    imageUrl: "/images/Graphic.jpg",
+    dataAiHint: "certificate document",
+  },
+  {
+    name: "Advacne Office Management",
+    issuer: "Worldwide Soft Technology",
+    date: "Issued 2022",
+    credentialLink: "https://wwsoftt.com/", // Example PDF path
+    imageUrl: "/images/Office.jpg",
     dataAiHint: "certificate document",
   }
 ];
@@ -95,13 +118,13 @@ export default function AboutSection() {
               className="rounded-full shadow-lg mb-6 object-cover"
             />
             <h3 className="text-2xl font-headline font-semibold text-primary mb-2">Anurag Rudra</h3>
-            <p className="text-muted-foreground mb-4">Web Developer & UI/UX Designer</p>
+            <p className="text-muted-foreground mb-4">Developer & Designer</p>
             <div className="flex items-center text-muted-foreground mb-4">
               <MapPin className="h-5 w-5 mr-2 text-primary" />
-              <span>Kolkata, India (Remote Worldwide)</span>
+              <span>Chattogram/Chittagong, Bangladesh (Remote Worldwide)</span>
             </div>
             <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 group">
-              <Link href="/Anurag_Rudra_CV.pdf" download="Anurag_Rudra_CV.pdf" target="_blank" rel="noopener noreferrer">
+              <Link href="/images/Anurag's CV.pdf" download="Anurag_Rudra_CV.pdf" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
               </Link>
