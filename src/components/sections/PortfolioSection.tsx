@@ -71,7 +71,7 @@ export default function PortfolioSection() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {portfolioItems.map((project) => (
-            <Card key={project.id} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 flex flex-col overflow-hidden rounded-xl">
+            <Card key={project.id} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 flex flex-col overflow-hidden rounded-xl group">
               <div className="relative w-full h-64">
                 <Image
                   src={project.imageUrl}
@@ -113,7 +113,7 @@ export default function PortfolioSection() {
                     </Link>
                   </Button>
                   {project.githubLink && (
-                    <Button asChild variant="ghost" className="text-muted-foreground hover:text-foreground transition-colors">
+                    <Button asChild variant="ghost" className="text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors">
                       <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
                         <Github className="mr-2 h-4 w-4" /> View Code
                       </Link>
