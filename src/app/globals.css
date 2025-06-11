@@ -4,95 +4,95 @@
 
 @layer base {
   :root {
-    --background: 0 0% 94%; /* #F0F0F0 Light Gray */
-    --foreground: 271 100% 10%; /* Very dark indigo, for text on light gray */
+    --background: 0 0% 100%; /* White */
+    --foreground: 0 0% 10%; /* Near Black */
 
-    --card: 0 0% 100%; /* white */
-    --card-foreground: 271 100% 10%; /* Very dark indigo */
+    --card: 0 0% 98%; /* Very Light Gray */
+    --card-foreground: 0 0% 10%; /* Near Black */
 
-    --popover: 0 0% 100%; /* white */
-    --popover-foreground: 271 100% 10%; /* Very dark indigo */
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 0 0% 10%; /* Near Black */
 
-    --primary: 271 100% 25%; /* #4B0082 Deep Indigo */
-    --primary-foreground: 0 0% 100%; /* White for contrast on deep indigo */
+    --primary: 0 0% 10%; /* Near Black */
+    --primary-foreground: 0 0% 98%; /* Very Light Gray (for text on primary) */
 
-    --secondary: 0 0% 96.1%; /* light gray */
-    --secondary-foreground: 271 100% 10%; /* Very dark indigo */
+    --secondary: 0 0% 94%; /* Light Gray */
+    --secondary-foreground: 0 0% 10%; /* Near Black */
 
-    --muted: 0 0% 90%; /* Slightly darker than background */
-    --muted-foreground: 0 0% 45.1%; /* mid gray */
+    --muted: 0 0% 90%; /* Light Gray - Muted */
+    --muted-foreground: 0 0% 40%; /* Medium Gray */
 
-    --accent: 288 83% 67%; /* #BE29EC Vibrant Purple */
-    --accent-foreground: 0 0% 100%; /* White for contrast on vibrant purple */
+    --accent: 0 0% 20%; /* Dark Gray */
+    --accent-foreground: 0 0% 98%; /* Very Light Gray (for text on accent) */
 
-    --destructive: 0 84% 60%; /* Standard red for destructive actions */
-    --destructive-foreground: 0 0% 98%; /* near white */
+    --destructive: 0 84% 60%; /* Standard Red */
+    --destructive-foreground: 0 0% 98%; /* Near white */
 
-    --border: 0 0% 89.8%; /* light gray */
-    --input: 0 0% 89.8%; /* light gray */
-    --ring: 288 83% 67%; /* Accent color for focus rings */
+    --border: 0 0% 85%; /* Gray Border */
+    --input: 0 0% 90%; /* Light Gray Input */
+    --ring: 0 0% 50%; /* Medium Gray Ring */
 
     --radius: 0.5rem;
 
-    --chart-1: 271 76% 53%;
-    --chart-2: 288 66% 57%;
-    --chart-3: 0 0% 70%;
-    --chart-4: 271 70% 65%;
-    --chart-5: 288 60% 60%;
+    --chart-1: 0 0% 20%;
+    --chart-2: 0 0% 30%;
+    --chart-3: 0 0% 40%;
+    --chart-4: 0 0% 50%;
+    --chart-5: 0 0% 60%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 271 100% 10%;
-    --sidebar-primary: 271 100% 25%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 288 83% 67%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 89.8%;
-    --sidebar-ring: 288 83% 67%;
+    --sidebar-background: 0 0% 96%; /* Off-white for light mode sidebar */
+    --sidebar-foreground: 0 0% 10%; /* Near black for text */
+    --sidebar-primary: 0 0% 15%; /* Slightly lighter black for primary elements */
+    --sidebar-primary-foreground: 0 0% 95%; /* Off-white for text on primary */
+    --sidebar-accent: 0 0% 25%; /* Darker gray for accent */
+    --sidebar-accent-foreground: 0 0% 95%; /* Off-white for text on accent */
+    --sidebar-border: 0 0% 88%; /* Light gray border */
+    --sidebar-ring: 0 0% 45%; /* Mid-gray ring */
   }
 
   .dark {
-    --background: 270 15% 12%; /* Dark Indigo/Slate */
-    --foreground: 0 0% 90%; /* Light Gray for text */
+    --background: 0 0% 10%; /* Near Black */
+    --foreground: 0 0% 95%; /* Very Light Gray */
 
-    --card: 270 15% 15%; /* Slightly lighter dark indigo */
-    --card-foreground: 0 0% 90%; /* Light Gray */
+    --card: 0 0% 12%; /* Very Dark Gray */
+    --card-foreground: 0 0% 95%; /* Very Light Gray */
 
-    --popover: 270 15% 10%; /* Darker popover background */
-    --popover-foreground: 0 0% 90%; /* Light Gray */
+    --popover: 0 0% 8%; /* Darkest Gray */
+    --popover-foreground: 0 0% 95%; /* Very Light Gray */
 
-    --primary: 271 70% 55%; /* Lighter Deep Indigo for dark mode */
-    --primary-foreground: 0 0% 98%; /* Near White */
+    --primary: 0 0% 90%; /* Light Gray (acting as primary in dark mode) */
+    --primary-foreground: 0 0% 10%; /* Near Black (for text on primary) */
 
-    --secondary: 270 15% 20%; /* Darker indigo variant */
-    --secondary-foreground: 0 0% 90%; /* Light Gray */
+    --secondary: 0 0% 15%; /* Dark Gray */
+    --secondary-foreground: 0 0% 95%; /* Very Light Gray */
 
-    --muted: 270 15% 25%; /* Even darker indigo variant for muted */
-    --muted-foreground: 0 0% 63.9%; /* Lighter mid gray */
+    --muted: 0 0% 20%; /* Dark Gray - Muted */
+    --muted-foreground: 0 0% 65%; /* Lighter Medium Gray */
 
-    --accent: 288 70% 70%; /* Lighter Vibrant Purple for dark mode */
-    --accent-foreground: 0 0% 5%; /* Dark for contrast on lighter purple */
+    --accent: 0 0% 80%; /* Lighter Gray */
+    --accent-foreground: 0 0% 10%; /* Near Black (for text on accent) */
 
-    --destructive: 0 60% 50%; /* Adjusted red for dark mode */
-    --destructive-foreground: 0 0% 98%; /* near white */
+    --destructive: 0 70% 50%; /* Adjusted Red for dark mode */
+    --destructive-foreground: 0 0% 98%; /* Near white */
 
-    --border: 270 15% 25%; /* Darker border */
-    --input: 270 15% 25%; /* Darker input background */
-    --ring: 288 70% 70%; /* Lighter accent for focus rings */
+    --border: 0 0% 25%; /* Dark Gray Border */
+    --input: 0 0% 20%; /* Dark Gray Input */
+    --ring: 0 0% 60%; /* Light Gray Ring */
     
-    --chart-1: 271 70% 60%;
-    --chart-2: 288 60% 65%;
-    --chart-3: 0 0% 30%;
-    --chart-4: 271 65% 70%;
-    --chart-5: 288 55% 75%;
+    --chart-1: 0 0% 80%;
+    --chart-2: 0 0% 70%;
+    --chart-3: 0 0% 60%;
+    --chart-4: 0 0% 50%;
+    --chart-5: 0 0% 40%;
 
-    --sidebar-background: 270 15% 10%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 271 70% 55%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 288 70% 70%;
-    --sidebar-accent-foreground: 0 0% 5%;
-    --sidebar-border: 270 15% 25%;
-    --sidebar-ring: 288 70% 70%;
+    --sidebar-background: 0 0% 12%; /* Dark gray for dark mode sidebar */
+    --sidebar-foreground: 0 0% 90%; /* Light gray for text */
+    --sidebar-primary: 0 0% 85%; /* Lighter gray for primary elements */
+    --sidebar-primary-foreground: 0 0% 15%; /* Dark gray for text on primary */
+    --sidebar-accent: 0 0% 75%; /* Medium-light gray for accent */
+    --sidebar-accent-foreground: 0 0% 15%; /* Dark gray for text on accent */
+    --sidebar-border: 0 0% 22%; /* Darker gray border */
+    --sidebar-ring: 0 0% 55%; /* Medium-gray ring */
   }
 }
 
