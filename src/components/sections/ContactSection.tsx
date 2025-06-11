@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useActionState, useEffect } from "react";
@@ -57,7 +58,7 @@ export default function ContactSection() {
           Get In Touch
         </h2>
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          <Card className="shadow-xl hover:shadow-2xl transition-shadow duration-300">
+          <Card className="shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
             <CardHeader>
               <CardTitle className="text-2xl text-primary font-headline">Send me a message</CardTitle>
               <CardDescription>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</CardDescription>
@@ -86,21 +87,21 @@ export default function ContactSection() {
           </Card>
 
           <div className="space-y-8">
-            <Card className="shadow-xl hover:shadow-2xl transition-shadow duration-300">
+            <Card className="shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary font-headline">Direct Contact</CardTitle>
                 <CardDescription>Feel free to reach out directly through these channels.</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <a href="mailto:arudra.dev@example.com" className="group flex items-center p-4 bg-card rounded-lg hover:bg-accent/10 transition-colors">
-                  <Mail className="h-8 w-8 text-accent mr-4" />
+                  <Mail className="h-8 w-8 text-accent mr-4 group-hover:scale-110 transition-transform duration-300" />
                   <div>
                     <h4 className="font-semibold text-lg text-foreground group-hover:text-accent transition-colors">Email</h4>
                     <p className="text-muted-foreground">arudra.dev@example.com</p>
                   </div>
                 </a>
                 <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="group flex items-center p-4 bg-card rounded-lg hover:bg-accent/10 transition-colors">
-                  <MessageCircle className="h-8 w-8 text-accent mr-4" />
+                  <MessageCircle className="h-8 w-8 text-accent mr-4 group-hover:scale-110 transition-transform duration-300" />
                   <div>
                     <h4 className="font-semibold text-lg text-foreground group-hover:text-accent transition-colors">WhatsApp</h4>
                     <p className="text-muted-foreground">+1 (234) 567-890 (Example)</p>

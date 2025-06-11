@@ -103,7 +103,7 @@ export default function AboutSection() {
           </div>
 
           <div className="md:col-span-2 space-y-8">
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card className="shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary font-headline">Professional Bio</CardTitle>
               </CardHeader>
@@ -117,7 +117,7 @@ export default function AboutSection() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card className="shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary font-headline">Experience Summary</CardTitle>
               </CardHeader>
@@ -132,7 +132,7 @@ export default function AboutSection() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card className="shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
               <CardHeader>
                 <div className="flex items-center space-x-3">
                   <GraduationCap className="h-7 w-7 text-primary" />
@@ -151,7 +151,7 @@ export default function AboutSection() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card className="shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
               <CardHeader>
                 <div className="flex items-center space-x-3">
                   <Award className="h-7 w-7 text-primary" />
@@ -174,7 +174,7 @@ export default function AboutSection() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card className="shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary font-headline">Comprehensive Skill Set</CardTitle>
               </CardHeader>
