@@ -66,7 +66,7 @@ const achievementsData = [
     date: "Issued 20XX",
     credentialLink: "/certificates/crash_course_python.pdf", // Example PDF path
     imageUrl: "https://placehold.co/300x210.png",
-    dataAiHint: "certificate document",
+    dataAiHint: "certificate doccument",
   },
   {
     name: "Graphic Design Certification",
@@ -88,7 +88,7 @@ export default function AboutSection() {
         <div className="grid md:grid-cols-3 gap-8 items-start">
           <div className="md:col-span-1 flex flex-col items-center text-center md:text-left md:items-start">
             <Image
-              src="/profile.jpg"
+              src="/images/profile.png" 
               alt="Anurag Rudra"
               width={200}
               height={200}
