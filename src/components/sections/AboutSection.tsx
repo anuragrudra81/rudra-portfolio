@@ -56,7 +56,7 @@ const achievementsData = [
     name: "Foundations: Data, Data, Everywhere",
     issuer: "Coursera / Google",
     date: "Issued 20XX",
-    credentialLink: "#" 
+    credentialLink: "#"
   },
   {
     name: "Crash Course on Python",
@@ -81,13 +81,12 @@ export default function AboutSection() {
         </h2>
         <div className="grid md:grid-cols-3 gap-8 items-start">
           <div className="md:col-span-1 flex flex-col items-center text-center md:text-left md:items-start">
-            <Image 
-              src="https://placehold.co/300x300.png" 
-              alt="Anurag Rudra" 
-              width={200} 
-              height={200} 
-              className="rounded-full shadow-lg mb-6"
-              data-ai-hint="professional portrait" 
+            <Image
+              src="/profile.jpg"
+              alt="Anurag Rudra"
+              width={200}
+              height={200}
+              className="rounded-full shadow-lg mb-6 object-cover"
             />
             <h3 className="text-2xl font-headline font-semibold text-primary mb-2">Anurag Rudra</h3>
             <p className="text-muted-foreground mb-4">Web Developer & UI/UX Designer</p>
@@ -117,7 +116,7 @@ export default function AboutSection() {
                 </p>
               </CardContent>
             </Card>
-            
+
             <Card className="shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary font-headline">Experience Summary</CardTitle>
