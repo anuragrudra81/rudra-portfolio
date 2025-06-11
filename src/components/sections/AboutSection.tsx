@@ -1,7 +1,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin, Download } from "lucide-react";
+import { MapPin, Download, GraduationCap, Award } from "lucide-react";
 import Image from 'next/image';
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -27,6 +27,48 @@ const experienceData = [
     company: "Creative Agency LLC",
     period: "2019 - 2021",
     description: "Developed responsive websites and e-commerce solutions for diverse clients, focusing on performance optimization and cross-browser compatibility."
+  }
+];
+
+const educationData = [
+  {
+    degree: "Intermediate",
+    institution: "Your College Name",
+    period: "20XX - 20YY",
+    details: "Science Stream"
+  },
+  {
+    degree: "HSC (Higher Secondary Certificate)",
+    institution: "Your School/College Name",
+    period: "Completed 20XX",
+    details: "Focus on Computer Applications"
+  },
+  {
+    degree: "SSC (Secondary School Certificate)",
+    institution: "Your School Name",
+    period: "Completed 20XX",
+    details: ""
+  }
+];
+
+const achievementsData = [
+  {
+    name: "Foundations: Data, Data, Everywhere",
+    issuer: "Coursera / Google",
+    date: "Issued 20XX",
+    credentialLink: "#" 
+  },
+  {
+    name: "Crash Course on Python",
+    issuer: "Coursera / Google",
+    date: "Issued 20XX",
+    credentialLink: "#"
+  },
+  {
+    name: "Graphic Design Certification",
+    issuer: "Your Certifying Body",
+    date: "Issued 20XX",
+    credentialLink: "#"
   }
 ];
 
@@ -61,8 +103,8 @@ export default function AboutSection() {
             </Button>
           </div>
 
-          <div className="md:col-span-2">
-            <Card className="mb-8 shadow-lg">
+          <div className="md:col-span-2 space-y-8">
+            <Card className="shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary font-headline">Professional Bio</CardTitle>
               </CardHeader>
@@ -76,7 +118,7 @@ export default function AboutSection() {
               </CardContent>
             </Card>
             
-            <Card className="mb-8 shadow-lg">
+            <Card className="shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary font-headline">Experience Summary</CardTitle>
               </CardHeader>
@@ -86,6 +128,48 @@ export default function AboutSection() {
                     <h4 className="text-lg font-semibold text-foreground">{exp.title} <span className="text-base font-normal text-muted-foreground">- {exp.company}</span></h4>
                     <p className="text-sm text-accent font-medium">{exp.period}</p>
                     <p className="text-muted-foreground mt-1">{exp.description}</p>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <GraduationCap className="h-7 w-7 text-primary" />
+                  <CardTitle className="text-2xl text-primary font-headline">Education</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                {educationData.map((edu, index) => (
+                  <div key={index}>
+                    <h4 className="text-lg font-semibold text-foreground">{edu.degree}</h4>
+                    <p className="text-base text-muted-foreground">{edu.institution}</p>
+                    <p className="text-sm text-accent font-medium">{edu.period}</p>
+                    {edu.details && <p className="text-muted-foreground mt-1">{edu.details}</p>}
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <Award className="h-7 w-7 text-primary" />
+                  <CardTitle className="text-2xl text-primary font-headline">Achievements & Certifications</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                {achievementsData.map((ach, index) => (
+                  <div key={index}>
+                    <h4 className="text-lg font-semibold text-foreground">{ach.name}</h4>
+                    <p className="text-base text-muted-foreground">{ach.issuer}</p>
+                    <p className="text-sm text-accent font-medium">{ach.date}</p>
+                    {ach.credentialLink && ach.credentialLink !== "#" && (
+                       <Link href={ach.credentialLink} target="_blank" rel="noopener noreferrer" className="text-sm text-accent hover:underline">
+                        View Credential
+                       </Link>
+                    )}
                   </div>
                 ))}
               </CardContent>
