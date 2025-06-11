@@ -12,12 +12,24 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
-        <LandingSection />
-        <AboutSection />
-        <ServicesSection />
-        <PortfolioSection />
-        <AiPrioritizerSection />
-        <ContactSection />
+        <div className="opacity-0 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <LandingSection />
+        </div>
+        <div className="opacity-0 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <AboutSection />
+        </div>
+        <div className="opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <ServicesSection />
+        </div>
+        <div className="opacity-0 animate-fade-in" style={{ animationDelay: '0.7s' }}>
+          <PortfolioSection />
+        </div>
+        <div className="opacity-0 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+          <AiPrioritizerSection />
+        </div>
+        <div className="opacity-0 animate-fade-in" style={{ animationDelay: '1.1s' }}>
+          <ContactSection />
+        </div>
       </main>
       <Footer />
     </div>

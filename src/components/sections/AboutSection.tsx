@@ -94,7 +94,7 @@ export default function AboutSection() {
               <MapPin className="h-5 w-5 mr-2 text-primary" />
               <span>Kolkata, India (Remote Worldwide)</span>
             </div>
-            <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors group">
+            <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 group">
               <Link href="/Anurag_Rudra_CV.pdf" download="Anurag_Rudra_CV.pdf" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
@@ -103,7 +103,7 @@ export default function AboutSection() {
           </div>
 
           <div className="md:col-span-2 space-y-8">
-            <Card className="shadow-lg">
+            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary font-headline">Professional Bio</CardTitle>
               </CardHeader>
@@ -117,7 +117,7 @@ export default function AboutSection() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg">
+            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary font-headline">Experience Summary</CardTitle>
               </CardHeader>
@@ -132,7 +132,7 @@ export default function AboutSection() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg">
+            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <div className="flex items-center space-x-3">
                   <GraduationCap className="h-7 w-7 text-primary" />
@@ -151,7 +151,7 @@ export default function AboutSection() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg">
+            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <div className="flex items-center space-x-3">
                   <Award className="h-7 w-7 text-primary" />
@@ -174,7 +174,7 @@ export default function AboutSection() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg">
+            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary font-headline">Comprehensive Skill Set</CardTitle>
               </CardHeader>

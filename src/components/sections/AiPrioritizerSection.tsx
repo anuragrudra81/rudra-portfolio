@@ -28,7 +28,6 @@ export default function AiPrioritizerSection() {
     setPrioritizedProjects([]);
 
     try {
-      // Split descriptions by newline, filter out empty lines, and trim whitespace
       const descriptionsArray = projectDescriptions
         .split('\n')
         .map(desc => desc.trim())
@@ -65,7 +64,7 @@ export default function AiPrioritizerSection() {
   return (
     <section id="ai-tool" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <Card className="max-w-2xl mx-auto shadow-xl">
+        <Card className="max-w-2xl mx-auto shadow-xl hover:shadow-2xl transition-shadow duration-300">
           <CardHeader className="text-center">
             <div className="inline-flex justify-center items-center mb-4">
               <Wand2 className="h-12 w-12 text-primary" />

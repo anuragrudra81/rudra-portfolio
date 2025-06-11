@@ -4,95 +4,95 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* white */
-    --foreground: 0 0% 3.9%; /* near black */
+    --background: 0 0% 94%; /* #F0F0F0 Light Gray */
+    --foreground: 271 100% 10%; /* Very dark indigo, for text on light gray */
 
     --card: 0 0% 100%; /* white */
-    --card-foreground: 0 0% 3.9%; /* near black */
+    --card-foreground: 271 100% 10%; /* Very dark indigo */
 
     --popover: 0 0% 100%; /* white */
-    --popover-foreground: 0 0% 3.9%; /* near black */
+    --popover-foreground: 271 100% 10%; /* Very dark indigo */
 
-    --primary: 0 0% 9%; /* dark gray */
-    --primary-foreground: 0 0% 98%; /* near white */
+    --primary: 271 100% 25%; /* #4B0082 Deep Indigo */
+    --primary-foreground: 0 0% 100%; /* White for contrast on deep indigo */
 
     --secondary: 0 0% 96.1%; /* light gray */
-    --secondary-foreground: 0 0% 9%; /* dark gray */
+    --secondary-foreground: 271 100% 10%; /* Very dark indigo */
 
-    --muted: 0 0% 96.1%; /* light gray */
+    --muted: 0 0% 90%; /* Slightly darker than background */
     --muted-foreground: 0 0% 45.1%; /* mid gray */
 
-    --accent: 0 0% 9%; /* dark gray (same as primary for monochrome) */
-    --accent-foreground: 0 0% 98%; /* near white */
+    --accent: 288 83% 67%; /* #BE29EC Vibrant Purple */
+    --accent-foreground: 0 0% 100%; /* White for contrast on vibrant purple */
 
-    --destructive: 0 0% 30%; /* mid-dark gray for destructive elements */
+    --destructive: 0 84% 60%; /* Standard red for destructive actions */
     --destructive-foreground: 0 0% 98%; /* near white */
 
     --border: 0 0% 89.8%; /* light gray */
     --input: 0 0% 89.8%; /* light gray */
-    --ring: 0 0% 9%; /* dark gray */
+    --ring: 288 83% 67%; /* Accent color for focus rings */
 
     --radius: 0.5rem;
 
-    --chart-1: 0 0% 50%;
-    --chart-2: 0 0% 60%;
+    --chart-1: 271 76% 53%;
+    --chart-2: 288 66% 57%;
     --chart-3: 0 0% 70%;
-    --chart-4: 0 0% 40%;
-    --chart-5: 0 0% 30%;
+    --chart-4: 271 70% 65%;
+    --chart-5: 288 60% 60%;
 
-    --sidebar-background: 0 0% 98%; /* near white */
-    --sidebar-foreground: 0 0% 9%; /* dark gray */
-    --sidebar-primary: 0 0% 9%; /* dark gray */
-    --sidebar-primary-foreground: 0 0% 98%; /* near white */
-    --sidebar-accent: 0 0% 96.1%; /* light gray */
-    --sidebar-accent-foreground: 0 0% 9%; /* dark gray */
-    --sidebar-border: 0 0% 89.8%; /* light gray */
-    --sidebar-ring: 0 0% 9%; /* dark gray */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 271 100% 10%;
+    --sidebar-primary: 271 100% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 288 83% 67%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 89.8%;
+    --sidebar-ring: 288 83% 67%;
   }
 
   .dark {
-    --background: 0 0% 3.9%; /* near black */
-    --foreground: 0 0% 98%; /* near white */
+    --background: 270 15% 12%; /* Dark Indigo/Slate */
+    --foreground: 0 0% 90%; /* Light Gray for text */
 
-    --card: 0 0% 3.9%; /* near black */
-    --card-foreground: 0 0% 98%; /* near white */
+    --card: 270 15% 15%; /* Slightly lighter dark indigo */
+    --card-foreground: 0 0% 90%; /* Light Gray */
 
-    --popover: 0 0% 3.9%; /* near black */
-    --popover-foreground: 0 0% 98%; /* near white */
+    --popover: 270 15% 10%; /* Darker popover background */
+    --popover-foreground: 0 0% 90%; /* Light Gray */
 
-    --primary: 0 0% 98%; /* near white */
-    --primary-foreground: 0 0% 9%; /* dark gray */
+    --primary: 271 70% 55%; /* Lighter Deep Indigo for dark mode */
+    --primary-foreground: 0 0% 98%; /* Near White */
 
-    --secondary: 0 0% 14.9%; /* dark gray */
-    --secondary-foreground: 0 0% 98%; /* near white */
+    --secondary: 270 15% 20%; /* Darker indigo variant */
+    --secondary-foreground: 0 0% 90%; /* Light Gray */
 
-    --muted: 0 0% 14.9%; /* dark gray */
-    --muted-foreground: 0 0% 63.9%; /* mid-light gray */
+    --muted: 270 15% 25%; /* Even darker indigo variant for muted */
+    --muted-foreground: 0 0% 63.9%; /* Lighter mid gray */
 
-    --accent: 0 0% 98%; /* near white (same as primary for monochrome) */
-    --accent-foreground: 0 0% 9%; /* dark gray */
+    --accent: 288 70% 70%; /* Lighter Vibrant Purple for dark mode */
+    --accent-foreground: 0 0% 5%; /* Dark for contrast on lighter purple */
 
-    --destructive: 0 0% 70%; /* mid-light gray for destructive elements */
-    --destructive-foreground: 0 0% 9%; /* dark gray */
+    --destructive: 0 60% 50%; /* Adjusted red for dark mode */
+    --destructive-foreground: 0 0% 98%; /* near white */
 
-    --border: 0 0% 14.9%; /* dark gray */
-    --input: 0 0% 14.9%; /* dark gray */
-    --ring: 0 0% 83.1%; /* light gray */
+    --border: 270 15% 25%; /* Darker border */
+    --input: 270 15% 25%; /* Darker input background */
+    --ring: 288 70% 70%; /* Lighter accent for focus rings */
     
-    --chart-1: 0 0% 50%;
-    --chart-2: 0 0% 40%;
+    --chart-1: 271 70% 60%;
+    --chart-2: 288 60% 65%;
     --chart-3: 0 0% 30%;
-    --chart-4: 0 0% 60%;
-    --chart-5: 0 0% 70%;
+    --chart-4: 271 65% 70%;
+    --chart-5: 288 55% 75%;
 
-    --sidebar-background: 0 0% 9%; /* dark gray */
-    --sidebar-foreground: 0 0% 98%; /* near white */
-    --sidebar-primary: 0 0% 98%; /* near white */
-    --sidebar-primary-foreground: 0 0% 9%; /* dark gray */
-    --sidebar-accent: 0 0% 14.9%; /* darker gray */
-    --sidebar-accent-foreground: 0 0% 98%; /* near white */
-    --sidebar-border: 0 0% 14.9%; /* darker gray */
-    --sidebar-ring: 0 0% 83.1%; /* light gray */
+    --sidebar-background: 270 15% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 271 70% 55%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 288 70% 70%;
+    --sidebar-accent-foreground: 0 0% 5%;
+    --sidebar-border: 270 15% 25%;
+    --sidebar-ring: 288 70% 70%;
   }
 }
 
