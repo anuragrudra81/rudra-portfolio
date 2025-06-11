@@ -1,7 +1,10 @@
+
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin } from "lucide-react";
+import { MapPin, Download } from "lucide-react";
 import Image from 'next/image';
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const skillsData = {
   languages: ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "PHP", "Python"],
@@ -46,10 +49,16 @@ export default function AboutSection() {
             />
             <h3 className="text-2xl font-headline font-semibold text-primary mb-2">Anurag Rudra</h3>
             <p className="text-muted-foreground mb-4">Web Developer & UI/UX Designer</p>
-            <div className="flex items-center text-muted-foreground mb-6">
+            <div className="flex items-center text-muted-foreground mb-4">
               <MapPin className="h-5 w-5 mr-2 text-primary" />
               <span>Kolkata, India (Remote Worldwide)</span>
             </div>
+            <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors group">
+              <Link href="/Anurag_Rudra_CV.pdf" download="Anurag_Rudra_CV.pdf" target="_blank" rel="noopener noreferrer">
+                <Download className="mr-2 h-5 w-5" />
+                Download CV
+              </Link>
+            </Button>
           </div>
 
           <div className="md:col-span-2">
