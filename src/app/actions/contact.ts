@@ -1,3 +1,4 @@
+
 "use server";
 
 import { z } from "zod";
@@ -30,26 +31,35 @@ export async function handleContactForm(
 
   const { name, email, subject, message } = validatedFields.data;
 
+  // Ensure environment variables are set
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    console.error("Email credentials (EMAIL_USER, EMAIL_PASS) are not set in .env file.");
+    return {
+      message: "Server configuration error. Please contact support.",
+      success: false,
+    };
+  }
+
   try {
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      service: "gmail", // Using Gmail as the service
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: process.env.EMAIL_USER, // Your Gmail address (sender)
+        pass: process.env.EMAIL_PASS, // Your Gmail App Password
       },
     });
 
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: "anuragrudra91@gmail.com",
-      replyTo: email,
+      from: `"${name}" <${process.env.EMAIL_USER}>`, // Sender's email (your configured email)
+      to: "anuragrudra91@gmail.com", // Recipient email address (your desired inbox)
+      replyTo: email, // Set the reply-to to the form submitter's email
       subject: `New Contact Form Submission: ${subject}`,
       text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage:\n${message}`,
     };
 
     await transporter.sendMail(mailOptions);
 
-    console.log("Email sent successfully");
+    console.log("Email sent successfully to anuragrudra91@gmail.com");
 
     return {
       message: "Thank you for your message! I'll get back to you soon.",
