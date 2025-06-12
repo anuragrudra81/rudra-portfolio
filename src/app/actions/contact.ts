@@ -1,6 +1,7 @@
 "use server";
 
 import { z } from "zod";
+import nodemailer from "nodemailer";
 
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -22,7 +23,7 @@ export async function handleContactForm(
 
   if (!validatedFields.success) {
     return {
-      message: "Validation Error: " + validatedFields.error.flatten().fieldErrors_1.map(err => err.message).join(", "),
+      message: "Validation Error: " + Object.values(validatedFields.error.flatten().fieldErrors).flat().join(", "),
       success: false,
     };
   }
@@ -30,16 +31,25 @@ export async function handleContactForm(
   const { name, email, subject, message } = validatedFields.data;
 
   try {
-    // In a real application, you would send an email or save to a database here.
-    // For example, using Nodemailer or an email API like SendGrid/Resend.
-    console.log("Contact Form Submission Received:");
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Subject:", subject);
-    console.log("Message:", message);
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
 
-    // Simulate a delay for processing
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: "anuragrudra91@gmail.com",
+      replyTo: email,
+      subject: `New Contact Form Submission: ${subject}`,
+      text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage:\n${message}`,
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    console.log("Email sent successfully");
 
     return {
       message: "Thank you for your message! I'll get back to you soon.",

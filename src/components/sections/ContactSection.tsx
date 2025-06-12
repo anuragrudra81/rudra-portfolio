@@ -93,18 +93,18 @@ export default function ContactSection() {
                 <CardDescription>Feel free to reach out directly through these channels.</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                <a href="mailto:arudra.dev@example.com" className="group flex items-center p-4 bg-card rounded-lg hover:bg-accent/10 transition-colors">
+                <a href="mailto:anuragrudra91@gmail.com" className="group flex items-center p-4 bg-card rounded-lg hover:bg-accent/10 transition-colors">
                   <Mail className="h-8 w-8 text-accent mr-4 group-hover:scale-110 transition-transform duration-300" />
                   <div>
                     <h4 className="font-semibold text-lg text-foreground group-hover:text-accent transition-colors">Email</h4>
-                    <p className="text-muted-foreground">arudra.dev@example.com</p>
+                    <p className="text-muted-foreground">anuragrudra91@gmail.com</p>
                   </div>
                 </a>
-                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="group flex items-center p-4 bg-card rounded-lg hover:bg-accent/10 transition-colors">
+                <a href="https://wa.me/+8801812243523" target="_blank" rel="noopener noreferrer" className="group flex items-center p-4 bg-card rounded-lg hover:bg-accent/10 transition-colors">
                   <MessageCircle className="h-8 w-8 text-accent mr-4 group-hover:scale-110 transition-transform duration-300" />
                   <div>
                     <h4 className="font-semibold text-lg text-foreground group-hover:text-accent transition-colors">WhatsApp</h4>
-                    <p className="text-muted-foreground">+1 (234) 567-890 (Example)</p>
+                    <p className="text-muted-foreground">+ (880) 1812243523</p>
                   </div>
                 </a>
               </CardContent>
