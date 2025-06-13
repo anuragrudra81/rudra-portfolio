@@ -1,6 +1,9 @@
 
 "use server";
 
+import { config } from 'dotenv';
+config();
+
 import { z } from "zod";
 import nodemailer from "nodemailer";
 
@@ -33,7 +36,7 @@ export async function handleContactForm(
 
   // Ensure environment variables are set
   if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-    console.error("Email credentials (EMAIL_USER, EMAIL_PASS) are not set in .env file.");
+    console.error("Email credentials (EMAIL_USER, EMAIL_PASS) are not set as environment variables.");
     return {
       message: "Server configuration error. Please contact support.",
       success: false,
@@ -73,3 +76,4 @@ export async function handleContactForm(
     };
   }
 }
+

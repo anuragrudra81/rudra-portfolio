@@ -4,6 +4,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/theme-provider";
 
+
 export const metadata: Metadata = {
   title: 'Anurag Rudra Portfolio',
   description: 'Portfolio of Anurag Rudra, Web Developer and Designer.',
