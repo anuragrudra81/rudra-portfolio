@@ -18,15 +18,15 @@ const skillsData = {
 const experienceData = [
   {
     title: "Freelance Web & Software Developer",
-    company: "Fiverr, Upwork & various IT Consultancies",
+    company: "Fiverr, Upwork & IT Consultancies",
     period: "2022 – Present",
-    description: "Spearheaded end-to-end development of diverse digital solutions—including websites, mobile applications, and bespoke software—for a global clientele. Mastered client communication, from initial requirement elicitation to consistent progress reporting, ensuring project alignment and satisfaction across multiple platforms."
+    description: "Led the complete development of various digital solutions—including websites, mobile apps, and software—for international clients. Managed clear communication throughout each project, from gathering initial requirements to regular updates, ensuring goals were met across all platforms."
   },
   {
     title: "Project Collaborator & Technical Trainer",
-    company: "Worldwide Soft Technology Company",
+    company: "Worldwide Soft Technology",
     period: "2022 – 2023",
-    description: "Actively contributed to international client projects while simultaneously managing local development initiatives. Elevated team capabilities by designing and delivering impactful training sessions for new developers, focusing on industry best practices and fostering a collaborative learning environment."
+    description: "Actively contributed to international client projects while also leading local development efforts. Improved team skills by creating and conducting effective training sessions for new developers, promoting best practices and a collaborative learning culture."
   }
 ];
 
@@ -63,40 +63,40 @@ const achievementsData = [
     name: "Foundations: Data, Data, Everywhere",
     issuer: "Coursera / Google",
     date: "Issued 2022",
-    credentialLink: "/certificates/Foundations_Data_Data_Everywhere.pdf",
-    imageUrl: "https://placehold.co/300x210.png",
+    credentialLink: "https://www.coursera.org/account/accomplishments/verify/KNEERTZ4PX65",
+    imageUrl: "/images/Foundations.jpg",
     dataAiHint: "certificate data analytics",
   },
   {
     name: "Crash Course on Python",
     issuer: "Coursera / Google",
     date: "Issued 2022",
-    credentialLink: "/certificates/Crash_Course_on_Python.pdf",
-    imageUrl: "https://placehold.co/300x210.png",
+    credentialLink: "https://www.coursera.org/account/accomplishments/verify/W8NF4S7NZJZT",
+    imageUrl: "/images/Python.jpg",
     dataAiHint: "certificate python programming",
   },
   {
     name: "COVID-19 Training for Healthcare Workers",
     issuer: "Coursera / Stanford",
     date: "Issued 2022",
-    credentialLink: "/certificates/COVID-19_Training_Healthcare_Workers.pdf",
-    imageUrl: "https://placehold.co/300x210.png",
+    credentialLink: "https://www.coursera.org/account/accomplishments/verify/ZDE8F8TDHQGN",
+    imageUrl: "/images/Stanford.jpg",
     dataAiHint: "certificate healthcare training",
   },
   {
     name: "Graphic Design",
     issuer: "LinkedIn",
     date: "Issued 2022",
-    credentialLink: "/certificates/Graphic_Design_Certification.pdf",
-    imageUrl: "https://placehold.co/300x210.png",
+    credentialLink: "https://www.linkedin.com/",
+    imageUrl: "/images/Graphic.jpg",
     dataAiHint: "certificate graphic design",
   },
   {
     name: "Advance Office Management",
     issuer: "Worldwide Soft Technology",
     date: "Issued 2022",
-    credentialLink: "/certificates/Advance_Office_Management.pdf",
-    imageUrl: "https://placehold.co/300x210.png",
+    credentialLink: "https://wwsoftt.com/",
+    imageUrl: "/images/Office.jpg",
     dataAiHint: "certificate office management",
   }
 ];
@@ -111,7 +111,7 @@ export default function AboutSection() {
         <div className="grid md:grid-cols-3 gap-8 items-start">
           <div className="md:col-span-1 flex flex-col items-center text-center md:text-left md:items-start">
             <Image
-              src="/profile.jpg" 
+              src="/images/profile.png" 
               alt="Anurag Rudra"
               width={200}
               height={200}
