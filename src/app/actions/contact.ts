@@ -34,7 +34,6 @@ export async function handleContactForm(
 
   const { name, email, subject, message } = validatedFields.data;
 
-  // Ensure environment variables are set
   if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
     console.error("Email credentials (EMAIL_USER, EMAIL_PASS) are not set as environment variables.");
     return {
@@ -45,15 +44,15 @@ export async function handleContactForm(
 
   try {
     const transporter = nodemailer.createTransport({
-      service: "gmail", // Using Gmail as the service
+      service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER, // Your Gmail address (sender)
-        pass: process.env.EMAIL_PASS, // Your Gmail App Password
+        user: process.env.EMAIL_USER, // Your Gmail address (sender) from .env
+        pass: process.env.EMAIL_PASS, // Your Gmail App Password from .env
       },
     });
 
     const mailOptions = {
-      from: `"${name}" <${process.env.EMAIL_USER}>`, // Sender's email (your configured email)
+      from: `"${name}" <${process.env.EMAIL_USER}>`, // Sender's address will be your EMAIL_USER
       to: "anuragrudra91@gmail.com", // Recipient email address (your desired inbox)
       replyTo: email, // Set the reply-to to the form submitter's email
       subject: `New Contact Form Submission: ${subject}`,
@@ -76,4 +75,3 @@ export async function handleContactForm(
     };
   }
 }
-
