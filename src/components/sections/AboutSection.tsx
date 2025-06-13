@@ -17,16 +17,16 @@ const skillsData = {
 
 const experienceData = [
   {
-    title: "Senior Web Developer",
-    company: "Tech Solutions Inc.",
-    period: "2021 - Present",
-    description: "Led development of complex web applications, mentored junior developers, and spearheaded UI/UX improvements resulting in a 20% increase in user engagement."
+    title: "Freelance Web & Software Developer",
+    company: "Fiverr, Upwork & various IT Consultancies",
+    period: "2022 – Present",
+    description: "Spearheaded end-to-end development of diverse digital solutions—including websites, mobile applications, and bespoke software—for a global clientele. Mastered client communication, from initial requirement elicitation to consistent progress reporting, ensuring project alignment and satisfaction across multiple platforms."
   },
   {
-    title: "Frontend Developer",
-    company: "Creative Agency LLC",
-    period: "2019 - 2021",
-    description: "Developed responsive websites and e-commerce solutions for diverse clients, focusing on performance optimization and cross-browser compatibility."
+    title: "Project Collaborator & Technical Trainer",
+    company: "Worldwide Soft Technology Company",
+    period: "2022 – 2023",
+    description: "Actively contributed to international client projects while simultaneously managing local development initiatives. Elevated team capabilities by designing and delivering impactful training sessions for new developers, focusing on industry best practices and fostering a collaborative learning environment."
   }
 ];
 
@@ -59,45 +59,45 @@ const educationData = [
 ];
 
 const achievementsData = [
-  {
+    {
     name: "Foundations: Data, Data, Everywhere",
     issuer: "Coursera / Google",
     date: "Issued 2022",
-    credentialLink: "https://www.coursera.org/account/accomplishments/verify/KNEERTZ4PX65", // Example PDF path
-    imageUrl: "/images/Foundations.jpg", // Placeholder for certificate thumbnail
-    dataAiHint: "certificate document",
+    credentialLink: "/certificates/Foundations_Data_Data_Everywhere.pdf",
+    imageUrl: "https://placehold.co/300x210.png",
+    dataAiHint: "certificate data analytics",
   },
   {
     name: "Crash Course on Python",
     issuer: "Coursera / Google",
     date: "Issued 2022",
-    credentialLink: "https://www.coursera.org/account/accomplishments/verify/W8NF4S7NZJZT", // Example PDF path
-    imageUrl: "/images/Python.jpg",
-    dataAiHint: "certificate doccument",
+    credentialLink: "/certificates/Crash_Course_on_Python.pdf",
+    imageUrl: "https://placehold.co/300x210.png",
+    dataAiHint: "certificate python programming",
   },
   {
     name: "COVID-19 Training for Healthcare Workers",
     issuer: "Coursera / Stanford",
     date: "Issued 2022",
-    credentialLink: "https://www.coursera.org/account/accomplishments/verify/ZDE8F8TDHQGN", // Example PDF path
-    imageUrl: "/images/Stanford.jpg",
-    dataAiHint: "certificate document",
+    credentialLink: "/certificates/COVID-19_Training_Healthcare_Workers.pdf",
+    imageUrl: "https://placehold.co/300x210.png",
+    dataAiHint: "certificate healthcare training",
   },
   {
     name: "Graphic Design",
     issuer: "LinkedIn",
     date: "Issued 2022",
-    credentialLink: "ATKyjdKKxXnljlgXoek1zMZxcyn3", // Example PDF path
-    imageUrl: "/images/Graphic.jpg",
-    dataAiHint: "certificate document",
+    credentialLink: "/certificates/Graphic_Design_Certification.pdf",
+    imageUrl: "https://placehold.co/300x210.png",
+    dataAiHint: "certificate graphic design",
   },
   {
-    name: "Advacne Office Management",
+    name: "Advance Office Management",
     issuer: "Worldwide Soft Technology",
     date: "Issued 2022",
-    credentialLink: "https://wwsoftt.com/", // Example PDF path
-    imageUrl: "/images/Office.jpg",
-    dataAiHint: "certificate document",
+    credentialLink: "/certificates/Advance_Office_Management.pdf",
+    imageUrl: "https://placehold.co/300x210.png",
+    dataAiHint: "certificate office management",
   }
 ];
 
@@ -111,7 +111,7 @@ export default function AboutSection() {
         <div className="grid md:grid-cols-3 gap-8 items-start">
           <div className="md:col-span-1 flex flex-col items-center text-center md:text-left md:items-start">
             <Image
-              src="/images/profile.png" 
+              src="/profile.jpg" 
               alt="Anurag Rudra"
               width={200}
               height={200}
@@ -123,7 +123,7 @@ export default function AboutSection() {
               <MapPin className="h-5 w-5 mr-2 text-primary" />
               <span>Chattogram/Chittagong, Bangladesh (Remote Worldwide)</span>
             </div>
-            <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 group">
+            <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover:scale-105">
               <Link href="/images/Anurag's CV.pdf" download="Anurag_Rudra_CV.pdf" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
@@ -188,34 +188,35 @@ export default function AboutSection() {
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10">
+                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10">
                   {achievementsData.map((ach, index) => (
-                    <div key={index} className="flex flex-col items-center text-center sm:text-left sm:items-start">
-                      <h4 className="text-lg font-semibold text-foreground mb-1">{ach.name}</h4>
-                      <p className="text-sm text-muted-foreground">{ach.issuer}</p>
-                      <p className="text-xs text-accent font-medium mb-3">{ach.date}</p>
-                      
-                      {ach.credentialLink && ach.imageUrl && (
-                        <Link href={ach.credentialLink} target="_blank" rel="noopener noreferrer" className="block w-full max-w-[250px] group transition-all duration-300 hover:scale-[1.02]">
-                          <div className="aspect-[4/3] relative border-2 border-muted group-hover:border-primary rounded-lg overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300 bg-background group-hover:bg-card">
-                            <Image
-                              src={ach.imageUrl}
-                              alt={`Certificate for ${ach.name}`}
-                              layout="fill"
-                              objectFit="contain"
-                              className="p-2 transition-transform duration-300 group-hover:scale-105"
-                              data-ai-hint={ach.dataAiHint}
-                            />
-                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                              <ExternalLink className="h-8 w-8 text-white" />
-                            </div>
+                    <Link key={index} href={ach.credentialLink} target="_blank" rel="noopener noreferrer" className="block group transition-all duration-300 hover:scale-[1.02]">
+                      <Card className="h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out">
+                        <div className="aspect-[4/3] relative border-b border-muted group-hover:border-primary overflow-hidden bg-background">
+                          <Image
+                            src={ach.imageUrl}
+                            alt={`Certificate for ${ach.name}`}
+                            layout="fill"
+                            objectFit="contain"
+                            className="p-2 transition-transform duration-300 group-hover:scale-105"
+                            data-ai-hint={ach.dataAiHint}
+                          />
+                           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <ExternalLink className="h-8 w-8 text-white" />
+                          </div>
+                        </div>
+                        <CardContent className="p-4 flex-grow flex flex-col justify-between">
+                          <div>
+                            <h4 className="text-md font-semibold text-foreground mb-1 group-hover:text-accent">{ach.name}</h4>
+                            <p className="text-xs text-muted-foreground">{ach.issuer}</p>
+                            <p className="text-xs text-accent/80 font-medium mb-2">{ach.date}</p>
                           </div>
                           <p className="text-center text-xs text-accent mt-2 group-hover:underline">
                             View Certificate
                           </p>
-                        </Link>
-                      )}
-                    </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
                   ))}
                 </div>
               </CardContent>
