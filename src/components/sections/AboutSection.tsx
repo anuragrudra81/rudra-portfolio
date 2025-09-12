@@ -32,8 +32,8 @@ const experienceData = [
 
 const educationData = [
   {
-    degree: "BACHELOR OF SCIENCE IN BUSINESS ADMINISTRATION & ARTIFICIAL INTELLIGENCE",
-    institution: "East Delta University",
+    degree: "Bachelor of Software Engineering (Artificial Intelligence)",
+    institution: "Torrens University, Flinders Street Campus, Melbourne, Australia",
     period: "2025-running",
     details: "Focus on Computer Applications"
   },
