@@ -121,7 +121,7 @@ export default function AboutSection() {
             <p className="text-muted-foreground mb-4">Developer & Designer</p>
             <div className="flex items-center text-muted-foreground mb-4">
               <MapPin className="h-5 w-5 mr-2 text-primary" />
-              <span>Chattogram/Chittagong, Bangladesh (Remote Worldwide)</span>
+              <span>16 Eyebright Rd, Mernda VIC 3754, Melbourne, Australia</span>
             </div>
             <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover:scale-105">
               <Link href="/images/Anurag's CV.pdf" download="Anurag_Rudra_CV.pdf" target="_blank" rel="noopener noreferrer">
